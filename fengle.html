@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点菜系统</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffebf0;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .message {
+            font-size: 20px;
+            color: #ff66b2;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .cute-button {
+            background-color: #ff99cc;
+            color: white;
+            font-size: 18px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 3px 3px 10px rgba(255, 102, 178, 0.4);
+            transition: all 0.3s;
+        }
+        
+        .cute-button:hover {
+            background-color: #ff66b2;
+            transform: scale(1.1);
+        }
+        
+        .hidden-text {
+            display: none;
+            font-size: 20px;
+            color: #ff4081;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">大家想要吃我们家141做的饭吗，点击开始选择进行点菜</div>
+    <button class="cute-button" onclick="showMessage()">开始选择</button>
+    <div class="hidden-text" id="output">那你就慢慢想吧</div>
+    
+    <script>
+        function showMessage() {
+            document.getElementById('output').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
